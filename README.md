@@ -18,6 +18,11 @@ remote: Total 28 (delta 5), reused 22 (delta 2), pack-reused 0
 Receiving objects: 100% (28/28), 213.01 KiB | 2.05 MiB/s, done.
 Resolving deltas: 100% (5/5), done.
 ```
+
+## Configure
+
+Modify the docker-compose.yaml file to insert your OpenAI API key
+
 ## Deploy with docker compose
 
 ```
