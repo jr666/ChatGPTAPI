@@ -1,6 +1,11 @@
 # ChatGPTAPI
 An expansion to the official OpenAI API code
 
+## Prereqs
+-docker
+-docker-compose
+-OpenAI API Key
+
 ## Download with git clone
 
 ```
