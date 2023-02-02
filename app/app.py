@@ -5,7 +5,7 @@ from datetime import datetime
 
 import openai
 from flask import Flask, redirect, render_template, request, url_for
-# Start Flash server by typing: flask run
+# Start Flask server by typing: flask run
 
 flask_logs = os.getenv("LOG_PATH")
 chat_logs = os.getenv("CHAT_PATH")
@@ -57,9 +57,6 @@ def write_out(string):
     file = open(chat_logs, "a")
     file.write(f"{string}\n")
     file.close()
-
-    # with open("ChatGPT.log", "w") as file:
-    #     file.write(string)
 
 def generate_prompt(prompt_input):
     return """{}""".format(
