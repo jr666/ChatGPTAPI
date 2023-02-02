@@ -2,7 +2,7 @@ services:
   webgpt: 
     build:
       context: app
-      target: builder
+      dockerfile: Dockerfile
     # flask requires SIGINT to stop gracefully
     # (default stop signal from Compose is SIGTERM)
     stop_signal: SIGINT
