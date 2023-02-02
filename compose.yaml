@@ -1,0 +1,16 @@
+services:
+  webgpt: 
+    build:
+      context: app
+      target: builder
+    # flask requires SIGINT to stop gracefully
+    # (default stop signal from Compose is SIGTERM)
+    stop_signal: SIGINT
+    environment:
+      - LOG_PATH=/logs/app.log
+      - CHAT_PATH=/logs/chatgpt.log
+      - OPENAI_API_KEY=<GET_YOUR_OPENAI_API_KEY_AND_PASTE_IT_HERE>
+    volumes:
+      - ./logs:/logs
+    ports:
+      - 5000:5000
